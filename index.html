@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction to Vue</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+  <div id="app">
+    <h1>{{greeting('morning')}}</h1>
+    <h1>{{name}}</h1>
+    <p>Job:{{job}}</p>
+    <a v-bind:href="website">My website</a><p></p> <!--data binding -->
+    <p v-html="websiteTag"></p>
+    <label>Name</label>
+    <input type="text" v-bind:value="name"><!--data binding -->
+    <label>Keyup</label>
+    <input type="text" name="test" v-on:keyup.enter="Keyup"/> <!-- event modifier and key event -->
+    <label>Child</label>
+    <input type="text" v-model="child"> <!--two way data binding -->
+    <p>My child name is {{child}}</p>
+    <p>My age is {{age}}</p>
+    <button v-on:click="big=!big"  v-bind:class="{big:big}" @click="age++">Increase one year</button>
+    <button v-on:click="age--">Decrease one year</button> <!--method and data -->
+    <button v-on:click="rong=!rong"  @dblclick="increase(10)">Increase 10 year</button>
+    <button v-bind:class="changeColor">Ateeb</button>
+    <button v-on:dblclick="decrease(10)">Decrease 10 year</button>
+    <p></p>
+    <!-- Canvas -->
+    <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div> <!-- event handling -->
+  </div>
+  </body>
+  <script src="app.js"></script>
+</html>

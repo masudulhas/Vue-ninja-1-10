@@ -1,0 +1,12 @@
+#canvas{
+  width: 600px;
+  padding: 200px 20px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.rong{
+  background: green;
+}
+.big{
+  width:50%;
+}
